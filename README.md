@@ -6,11 +6,11 @@ Josh Hortt
 version: 14/06/201
 
 ## Technologies Used
-ASP.NET Core 5.0
-SQL Server 2019
-Azure
-Visual Studio 2019 Community
-Entity Framework Core
+ASP.NET Core 5.0,
+SQL Server 2019,
+Azure,
+Visual Studio 2019 Community,
+Entity Framework Core.
 
 ## Description
 The Application is about a small book list application with CRUD operations.
