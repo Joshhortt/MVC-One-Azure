@@ -14,5 +14,7 @@ namespace MvcOne.Data
 			
 	    }
 		public DbSet<Category> Category { get; set; }  // The entity prop we want to create to the DB is Category with the same name
+		public DbSet<ApplicationType> ApplicationType { get; set; }  // The entity prop we want to create to the DB is ApplicationType with the same name
+
 	}
 }
