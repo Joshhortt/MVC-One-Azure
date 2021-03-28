@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MvcOne.Data;
+using MvcOne.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +10,18 @@ namespace MvcOne.Controllers
 {
 	public class CategoryController : Controller
 	{
-		public IActionResult Index()  // action is added here bit is necessary to add view in _Layout.cshtml
+		private readonly ApplicationDbContext _db;
+
+		public CategoryController(ApplicationDbContext db)
 		{
-			return View();
+			_db = db;
+		}
+
+
+		public IActionResult Index()
+		{
+			IEnumerable<Category> objList = _db.Category;
+			return View(objList);
 		}
 	}
 }
