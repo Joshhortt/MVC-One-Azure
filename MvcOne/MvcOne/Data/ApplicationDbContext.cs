@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using MvcOne.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,8 @@ namespace MvcOne.Data
 	{
 		public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
 		{
-
-		}
+			
+	    }
+		public DbSet<Category> Category { get; set; }  // The entity prop we want to create to the DB is Category with the same name
 	}
 }
