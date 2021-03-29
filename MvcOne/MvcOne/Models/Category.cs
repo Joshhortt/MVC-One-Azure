@@ -14,6 +14,8 @@ namespace MvcOne.Models
 		public string Name { get; set; }
 
 		[DisplayName("Display Order")]  // Data annotations added
+		[Required]
+		[Range(1,int.MaxValue,ErrorMessage ="Display the Order for Category that must be greater than zero.")]
 		public int DisplayOrder{ get; set; }
 	}
 }
